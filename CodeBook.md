@@ -20,6 +20,10 @@ The whole input dataset is described in details in the following files:
 - ./UCI HAR Dataset/README.txt
 - ./UCI HAR Dataset/features_info.txt -> input variables description
 
+Features with a word 'Acc' in their names are in standard gravity units 'g'.
+
+Features with a word 'Gyro' in their names are in radians/second units.
+
 ## Output data
 
 The output data is a long form of a tidy data set. All feature names are in one column named 'variableType' and all feature values (mean) are in a second column named 'variableAverageValue'.
@@ -30,6 +34,10 @@ The list of the output data set columns:
 - **activityType** -> type: Factor, represents the activity labels from 'activity_labels.txt' input data
 - **variableType** -> type: Factor, represents the features from 'features.txt' input data
 - **variableAverageValue** -> type: numeric, represents the average value of each variable (variableType column) for each activity (activityType column) and each subject (subjectId column). The column values are bounded within [-1,1] as they base on the input data feature values that are normalized and bounded within [-1,1].
+
+variableTypes (features) with a word 'Acc' in their names are in standard gravity units 'g'.
+
+variableTypes (eatures) with a word 'Gyro' in their names are in radians/second units.
 
 The output data consists of 4 columns and 14220 rows.
 
